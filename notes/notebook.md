@@ -22,3 +22,37 @@
     in most cases pixel value range from *0* to *255*
     in binary images pixel value is in [0,1]
     in 16 bits images pixel value range from *0* to *65535*
+
+# Lesson 2 `Input/Output`
+    Начинаем с:
+`import os`
+`import cv2`
+
+1) Read image
+    *Предположим что image находится в той же директории что и проект*
+    *в папке data*
+    
+    `define image path`
+    `image_path = os.path.join('.','data','image.jpg')`
+    т.е указываем в () директорию, папку и название файла
+    
+    *Теперь создаем переменную в которой будем считывать image*
+
+    **cv2.imread(путь к image)** - Супер важная функция, основа основ
+    
+2) Saving image 
+
+    `img = cv2.imread(image_path)` - Сохраняем набор пискелей в img
+
+    *Как сохранять на комп отредаченое изображение*
+    `cv2.imwrite(os.path.join('.','data','new_image.jpg'),img)`
+
+    **cv2.imwrite(куда сохраняем, что сохраняем)**
+
+3) Visualize image
+
+    `cv2.imshow('frame', img)`
+    `cv2.waitKey(0)` - Откроется окно с картинкой, будет стоять 0 мс
+
+    **cv2.imshow('название окна', что показываем)**
+    **cv2.waitKey(кол-во милисекунд)**
