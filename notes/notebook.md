@@ -56,3 +56,31 @@
 
     **cv2.imshow('название окна', что показываем)**
     **cv2.waitKey(кол-во милисекунд)**
+
+# Lesson 3 `Videos`
+1) Read video
+    *Для начала specify video path:*
+    `video_path = os.path.join('.'.'data','video.mp4')`
+
+    *Теперь сам reading*
+    `video = cv2.VideoCapture(video_path)`
+
+    **cv2.VideoCapture(путь к видосу)**
+
+2) Visualize video
+    *We have to create `variable` and set it to True
+    `ret = True`
+
+    `while ret:`
+        `ret, frame = video.read()`
+        `if ret:`
+            `cv2.imshow('frame', frame)`
+            `cv2.waitKey(40)`
+
+    **название var где происходит чтение пикселей + .read**
+
+    *ВАЖНО!!! Чтобы освободить память нужно прописать:*
+        `video.release()`
+        `cv2.destroyAllWindows()`
+
+
