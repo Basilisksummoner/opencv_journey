@@ -114,3 +114,27 @@
             `if ret:`
                 `cv2.imshow('frame', frame)` - **второй аргумент всегда `frame`**
                 `cv2.waitKey(40)`
+
+# Lesson 5 `Camera`
+1) Camera reading
+    *Всё тоже самое НО*
+    `var_name` = `cv2.VideoCapture(0)` 
+    указываем в скобках инедкс вебки (т.е если одна вебка на компе то 0)
+
+2) Visualize camera
+    *Тоже самео что с видосом НО*
+    пишем логику таким образом:
+
+    `while True:` - потому что с вебки не заканчиваются frames
+
+    `while True:`
+    `ret, frame = my_cam0.read()`
+
+    `cv2.imshow('frame', frame)`
+    `if cv2.waitKey(40) & 0xFF == ord('q'):`
+        `break`
+
+    **& 0xFF == ord('q'):** - Тут мы пишем что будем ждать 40мс и
+    если user нажмёт `q` то мы `break` выйдем из цикла 
+
+
