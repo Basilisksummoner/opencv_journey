@@ -166,3 +166,30 @@
     img[y1:y2, x1:x2]
     y1:y2 — диапазон по вертикали (высота) → строки → rows
     x1:x2 — диапазон по горизонтали (ширина) → столбцы → columns
+
+# Lesson 7 `Colorspaces`
+
+*Это очень болшая тема в CV но пока будет инфа для introduction level*
+
+Когда мы считываем изображение через `cv2.imread()`
+    absoultely every time this image will be in `BGR` colorspace
+    Т.е `Blue` `Green` `Red` все пиксели это комбинация этих цветов
+
+ВАЖНО!!! Не RGB а `BGR`
+
+1) Converting colorspace
+
+    **cv2.cvtColor()** - функция для конверсии `colorspace`'а
+
+    *Должно быть два аргумента*
+    `new_image = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)`
+    `img` - там где пиксели с cv2.imread()
+    `cv2.COLOR_BGR2RGB` - уазываем что с BGR to (ну или 2) RGB
+
+    Тут в прямом смысле происходит switch по буквам т.е:
+        `B G R` to `R G B` 
+        всё что было `Blue` теперь `Red`
+        и т.д
+
+    **cv2.COLOR_BGR2GRAY** - в серый
+    **cv2.COLOR_BGR2HSV** - используется для color detecting
