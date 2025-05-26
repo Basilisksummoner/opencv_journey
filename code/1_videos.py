@@ -13,7 +13,7 @@ while ret:
     ret, frame = video_1.read()     # .read() возвращает два значения
     if ret:
         cv2.imshow('Video', frame)
-        cv2.waitKey(40)
+        cv2.waitKey(7)
 
 
 # Чтобы не забивать память

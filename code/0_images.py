@@ -10,3 +10,4 @@ img_1 = cv2.imread(image_path)
 
 cv2.imshow('Image',img_1)  # Визуализируем, принимает два аргумента 
 cv2.waitKey(0)             # waitKey чтобы окно с image не закрывалось
+
