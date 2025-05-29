@@ -11,3 +11,7 @@ while True:
     cv2.imshow('Camera', frame)
     if cv2.waitKey(40) & 0xFF == ord('q'):    # Тут мы пишем что будем ждать 40мс и
         break                               # если user нажмёт `q` `break` из цикла
+
+
+my_camera.release()
+cv2.destroyAllWindows()
