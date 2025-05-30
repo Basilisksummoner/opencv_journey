@@ -193,3 +193,17 @@
 
     **cv2.COLOR_BGR2GRAY** - в серый
     **cv2.COLOR_BGR2HSV** - используется для color detecting
+
+# Lesson 8 `Blurring`
+
+*Blurrng images can help with removing noise*
+
+ **cv2.blur(x, y) - x = img, y = kernel size**
+
+
+*Как происходит `блюр` изображений*
+Итак, image это числовая матрица, функция блюра в cv2
+рассчитывает average всех чисел в матрице и ложит их в указанные
+координаты `.blur()`
+-----------------------------------------------------
+
