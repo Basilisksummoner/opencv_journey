@@ -207,3 +207,8 @@
 координаты `.blur()`
 --------------------------------------------------
 
+There is multiple methods of computing the blur
+
+**cv2.GaussianBlur()**
+
+**cv2.medianBlur()**
